@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Projets 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <img src="/assets/icon/logo-Comit-lab.png" alt="Logo Comitlab" />
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let project of projects"
+                      
+    >
+      <ion-card>
+        <ion-item class="cmtredcolor">
+          <ion-icon name="briefcase" slot="start"></ion-icon>
+            <ion-label>{{ project.projectName }}</ion-label>
+        </ion-item>
+        
+          <ion-card-content>
+            <h2>Nom du client : {{ project.cstmName }}</h2>
+            <p>Description du projet : {{ project.projectDescription }}</p>
+            <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <p>La date de début : {{ project.startDate }}</p>
+                  </ion-col>
+                  <ion-col>
+                    <p>La date de fin : {{ project.endDate }}</p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            <p>Statut du projet : {{ project.projectStatus }}</p>
+          </ion-card-content>
+
+        <ion-item class="projectFooter">
+          <ion-button fill="clear"
+                      (click)="presentPopover($event)">
+              <ion-icon slot="start" 
+                        size="default"
+                        color="success"
+                        name="eye">
+              </ion-icon>
+              Voir plus
+            </ion-button>
+            
+            <ion-button fill="clear" href="details-project/{{this.project.id}}" 
+                        routerDirection="forward">
+              <ion-icon 
+                        slot="start" 
+                        size="default" 
+                        color="warning" 
+                        name="create">
+              </ion-icon>
+              Modifier
+            </ion-button>
+        </ion-item>
+      </ion-card>
+      </ion-item-sliding>
+  </ion-list>
+
+    <!-- btn for add project -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/details-project" routerDirection="forward">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+<!-- btn popover showProject 
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button (click)="presentPopover($event)">
+      <ion-icon name="more"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+-->
+
+</ion-content>

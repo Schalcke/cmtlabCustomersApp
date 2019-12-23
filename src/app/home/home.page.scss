@@ -1,0 +1,31 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+ion-toolbar{
+  ion-item{
+    margin: 0;
+    background: red;
+    border: none;
+  }
+}
+
+ion-title{
+  color: #fff;
+  background-color: #0c3144;
+}
+
+ion-card-header{
+  text-align: center;
+}
+
+ion-card{
+  box-shadow: none;
+}
+
+
+ion-button{
+  margin: 10px;
+}
+

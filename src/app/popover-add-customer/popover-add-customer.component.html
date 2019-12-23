@@ -1,0 +1,42 @@
+<ion-card>
+  <ion-item class="activated">
+    <ion-icon name="add" slot="start"></ion-icon>
+    <ion-label>Ajoutez votre projet</ion-label>
+  </ion-item>
+  
+  <ion-card-content expand="full">
+    <ion-item>
+      <ion-input required clearInput placeholder="Nom du Cilent" type="text" [(ngModel)]="project.cstmName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input required clearInput placeholder="Nom du projet" type="text" [(ngModel)]="project.projectName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input required clearInput placeholder="Description" type="note" [(ngModel)]="project.projectDescription"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input required clearInput placeholder="Date de début" type="date" [(ngModel)]="project.cstmName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input required clearInput placeholder="Dated e fin" type="date" [(ngModel)]="project.cstmName"></ion-input>
+    </ion-item>
+
+    <ion-item class="">
+      <ion-chip (click)="addProject()" color="primary">
+        <ion-icon name="done-all" color="#fff"></ion-icon>
+        <ion-label>Enregister</ion-label>
+      </ion-chip>
+
+      <ion-chip (click)="close()" color="danger">
+        <ion-icon name="close" color="#fff"></ion-icon>
+        <ion-label>Quiter</ion-label>
+      </ion-chip>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+
+

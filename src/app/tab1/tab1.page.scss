@@ -1,0 +1,107 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+ion-card-header{
+  text-align: center;
+}
+
+ion-title{
+  color: #fff;
+  background-color: #0c3144;
+}
+
+ion-label{
+  color: #5c5c5c;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ion-card{
+  margin-top: 60px;
+}
+
+
+.header {
+  height: 180px;
+  background-color: #822320;
+  width: 100%;
+  padding-top: 1px;
+}
+
+.header h2 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0px 10px;
+}
+
+.ion-badge{
+  background-color: #0c3144;
+}
+
+.projectsNmbs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectsNmbs p {
+  color: white;
+  margin: 8px 0px 0px 0px;
+}
+
+.box-border{
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.img-box {
+  background-color: #822320;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 130px;
+  width: 130px;
+  padding: 15px;
+}
+
+.border-white {
+  border: white solid 4px;
+  border-radius: 50%;
+  width: fit-content;
+}
+
+.border-blue {
+  border: 7px solid #0c3144;
+  border-radius: 50%;
+  width: fit-content;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: -76px;
+}
+
+.tweet ion-label {
+  line-height: 1!important;
+  font-size: 15px;
+  margin: 6px 0px 6px 0px!important;
+  min-height: 34px;
+}
+
+.tweet {
+  margin-top: -10px!important;
+}
+
+.tweet-img {
+  border-radius: 10px;
+  width: 95%;
+  margin-left: 2.5%;
+}
+

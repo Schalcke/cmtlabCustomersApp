@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Details
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <ion-list lines="full">
+      <ion-item *ngIf="project">
+        <ion-input required clearInput placeholder="Nom du Cilent" type="text" [(ngModel)]="project.cstmName"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="project">
+        <ion-input required clearInput placeholder="Nom du projet" type="text" [(ngModel)]="project.projectName"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="project">
+        <ion-input required clearInput placeholder="Description" type="note" [(ngModel)]="project.projectDescription"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="project">
+        <ion-input required clearInput placeholder="Date de début" type="date" [(ngModel)]="project.startDate" display-format="MMM DD, YYYY HH:mm"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="project">
+        <ion-input required clearInput placeholder="Dated e fin" type="date" [(ngModel)]="project.endDate" display-format="MMM DD, YYYY HH:mm"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Statut</ion-label>
+          <ion-select placeholder="Statut du projet" type="text" [(ngModel)]="project.projectStatus">
+            <ion-select-option value="A faire">A faire</ion-select-option>
+            <ion-select-option value="En cours">En cours</ion-select-option>
+            <ion-select-option value="Terminer">Terminer</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  
+    <!-- Save BTN -->
+    <ion-button class="saveBtn" expand="full" (click)="saveProject()" routerLink="/tabs/tab2" routerDirection="forward">Enregister</ion-button>
+    <!-- Back BTn -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+      <ion-fab-button color="danger"(click)="onRemoveProject(projectId)" routerLink="/tabs/tab2" routerDirection="forward" >
+        <ion-icon name="trash"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <!-- Remove BTN -->
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed" color="primary">
+      <ion-fab-button color="primary" routerLink="/tabs/tab2" routerDirection="forward" >
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+  
